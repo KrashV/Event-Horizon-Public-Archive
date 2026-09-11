@@ -625,7 +625,7 @@ window.characters = [
     {
         file: "Kitt.png",
         name: "Kitt",
-        quote: ""
+        quote: "Made in Wilten"
     },
     {
         file: "Klein.png",
