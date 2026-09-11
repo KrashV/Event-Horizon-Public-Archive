@@ -745,7 +745,7 @@ window.characters = [
     {
         file: "Melissa2.png",
         name: "Melissa Leonhart",
-        quote: "",
+        quote: "“Perhaps we now understand that not everything has to have an answer.”",
         thought: "Thank ya fer tryin' to help. I was... just too far gone, at that point, to listen."
     },
     {
