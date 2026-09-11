@@ -729,7 +729,7 @@ window.characters = [
     {
         file: "LegualtNew.png",
         name: "Marie Leduc",
-        quote: "",
+        quote: "“You found a pebble on the side of the road and polished it into something beautiful.”",
         thought: "I sat with ya when everyone was dyin'. Asked what wine ya love. It was... horrifyin'. To see everyone die around you, with you havin' no way to help'em. I hope ya never feel that, Sister. I hope ya never do."
     },
     {
