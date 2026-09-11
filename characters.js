@@ -525,7 +525,7 @@ window.characters = [
     {
         file: "Ishumeht.png",
         name: "Ishumeht",
-        quote: "",
+        quote: "“There is a war, deep in our hearts, and that is where all battles ought to be fought.”",
         thought: "Don't laugh, but... It was the most beautiful bug I've ever seen. Would ya let me call it after me?"
     },
     {
