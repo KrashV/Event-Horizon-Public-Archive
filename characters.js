@@ -1066,7 +1066,7 @@ window.characters = [
     {
         file: "Tess.png",
         name: "Tessa Yaribay",
-        quote: ""
+        quote: "“Hope for the best, prepare for the worst. I hope I left my mark on this place, but it's time to go back home.”"
     },
     {
         file: "Tonantzin.png",
