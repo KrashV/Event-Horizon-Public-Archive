@@ -881,7 +881,7 @@ window.characters = [
     },
     {
         file: "Peter.png",
-        name: "Peter",
+        name: "Peter Kirilovich",
         quote: "“Don't think I'll ever like the color red again. This stuff doesn't wash out.”"
     },
     {
