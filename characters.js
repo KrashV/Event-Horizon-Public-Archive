@@ -27,7 +27,7 @@ window.characters = [
     },
     {
         file: "MrsTreatment.png",
-        name: "Mrs. Agness Treatment",
+        name: "Ms. Agness Treatment",
         quote: "“In the end, it was not the cigarettes.”"
     },
     {
