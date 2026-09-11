@@ -392,7 +392,7 @@ window.characters = [
     {
         file: "Everglade.png",
         name: "Everglade \"Fishstick\" Glowwater",
-        quote: ""
+        quote: "“Here, drink this!”"
     },
     {
         file: "Firefly.png",
@@ -997,7 +997,7 @@ window.characters = [
     },
     {
         file: "Saffron.png",
-        name: "Saffron",
+        name: "'Saffron'",
         quote: "“Discard that knife and go find your paradise.”"
     },
     {
