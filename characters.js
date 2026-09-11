@@ -1024,7 +1024,7 @@ window.characters = [
     {
         file: "seeker.png",
         name: "Seeker",
-        quote: "",
+        quote: "“It's time I finally went home. Thank you all for your time.”",
         thought: "I'd consider ya a kindred... robo..spirit. Guys like us should have stayed t'gether. We get lost too fast, otherwise."
     },
     {
