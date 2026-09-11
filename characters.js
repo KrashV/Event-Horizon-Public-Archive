@@ -55,13 +55,12 @@ window.characters = [
     {
         file: "Alphonse.png",
         name: "Alphonse Oswell",
-        quote: "",
-        thought: "“I still fear the open water, where tide sways mystery. Is it so wrong to walk the paths already built for me?”"
+        quote: "“I still fear the open water, where tide sways mystery. Is it so wrong to walk the paths already built for me?”"
     },
     {
         file: "AmaSaba.png",
         name: "Ama-Saba",
-        quote: ""
+        quote: "“A world just as doomed as mine, but no doubt not the last.”"
     },
     {
         file: "Amelia.png",
@@ -741,7 +740,7 @@ window.characters = [
     {
         file: "Mark.png",
         name: "Mark",
-        quote: ""
+        quote: "“Blair has great boobs.”"
     },
     {
         file: "Melissa2.png",
