@@ -875,6 +875,11 @@ window.characters = [
         quote: ""
     },
     {
+        file: "Pathos.png",
+        name: "Pathos",
+        quote: "“Sentimentality is the purpose of everything.”"
+    },
+    {
         file: "Peter.png",
         name: "Peter",
         quote: "“Don't think I'll ever like the color red again. This stuff doesn't wash out.”"
