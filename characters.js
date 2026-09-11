@@ -234,8 +234,8 @@ window.characters = [
     {
         file: "ChrisNew.png",
         name: "Chris Calman",
-        quote: "",
-        thought: "I still feel the warmth of yer lips on my shell, even as it's gettin' thinner by the day. It keeps me just a little bit more sane. Do you... do you even remember it?"
+        quote: "“Love y'all!”",
+        thought: "I still feel the warmth of yer lips on my shell, even as it's gettin' thinner by the day. It keeps me just a little bit more sane. Do you... do you even remember it?   Bah, in any case. Cami is amazing, I'm happy fer ya both!"
     },
     {
         file: "Chitlihuitzi.png",
