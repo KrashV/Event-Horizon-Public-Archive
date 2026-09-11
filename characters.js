@@ -939,8 +939,8 @@ window.characters = [
         quote: "“For what little time I spent here, it was fun. But it's time to find something else to enjoy.”"
     },
     {
-        file: "RÜDIGER.png",
-        name: "Rüdiger",
+        file: "RUDIGER.png",
+        name: "Rüdiger Typhen",
         quote: "“Are you the sum of all which the light graces, or will you be valued by the outlines you leave?”"
     },
     {
