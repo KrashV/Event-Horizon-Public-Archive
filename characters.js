@@ -1099,7 +1099,7 @@ window.characters = [
     {
         file: "Ushiro.png",
         name: "Ushiro",
-        quote: ""
+        quote: "Never got to commit cannibalism."
     },
     {
         file: "Vael.png",
