@@ -601,7 +601,7 @@ window.characters = [
     {
         file: "Kayada.png",
         name: "Kayada",
-        quote: "",
+        quote: "“Home is in the company kept.”",
         thought: "I don' know how to talk to women. No need t'lie - I wanted t'talk to ya, but, I guess, t'was a bad time for both of us. At least I know ya'll be in good hands. Please also be good hands fer him."
     },
     {
