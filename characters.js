@@ -675,12 +675,6 @@ window.characters = [
         thought: "For a moth an' a light, we DEFINITELY were not a pair. I'm gonna say it. Yur a bitch. A meanie, even!"
     },
     {
-        file: "LegualtNew.png",
-        name: "Legualt",
-        quote: "",
-        thought: "I sat with ya when everyone was dyin'. Asked what wine ya love. It was... horrifyin'. To see everyone die around you, with you havin' no way to help'em. I hope ya never feel that, Sister. I hope ya never do."
-    },
-    {
         file: "Letter.png",
         name: "Letter",
         quote: ""
@@ -731,6 +725,12 @@ window.characters = [
         name: "Marcellus Sokolov",
         quote: "“I wish I never left Mars. Some days however I'm grateful I did.”",
         thought: "A colleague! Sorry fer crashin' out in front of ya. I was on t'verge of dyin' fer t'third time."
+    },
+    {
+        file: "LegualtNew.png",
+        name: "Marie Leduc",
+        quote: "",
+        thought: "I sat with ya when everyone was dyin'. Asked what wine ya love. It was... horrifyin'. To see everyone die around you, with you havin' no way to help'em. I hope ya never feel that, Sister. I hope ya never do."
     },
     {
         file: "Marlen.png",
