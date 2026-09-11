@@ -28,7 +28,8 @@ window.characters = [
     {
         file: "MrsTreatment.png",
         name: "Ms. Agness Treatment",
-        quote: "“In the end, it was not the cigarettes.”"
+        quote: "“In the end, it was not the cigarettes.”",
+        thought: "A good doctor."
     },
     {
         file: "Aisha.png",
