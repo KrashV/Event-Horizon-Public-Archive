@@ -635,7 +635,7 @@ window.characters = [
     {
         file: "Dealer.png",
         name: "Klein Kava'adar, The Dealer\nThe House\nThe Executant\nThe Black Jack\nThe Weaver of Fate\nThe Son of Fortune\nThe Serpent of Spades",
-        quote: "“Each and every story of yours was truly inspiring. But now, it's time to write my own.”"
+        quote: "“Each and every Choice of yours was truly inspiring. Nnow, it's time to make my own.”"
     },
     {
         file: "Kluexilin.png",
