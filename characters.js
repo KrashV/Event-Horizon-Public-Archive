@@ -34,7 +34,7 @@ window.characters = [
         file: "Aisha.png",
         name: "Aisha Heartleigh",
         quote: "“Making people's days fluffier since the year 2000!”",
-        thought: "A kindrid spirit. Maybe we could be frien's, in some other life?"
+        thought: "A kindred spirit. Maybe we could be friends, in some other life?"
     },
     {
         file: "Aki.png",
@@ -298,8 +298,8 @@ window.characters = [
     },
     {
         file: "Danaar-Helmet.png",
-        name: "Danaar",
-        quote: "",
+        name: "Danaar\n\"Zalu-Bavgai\" Ruus",
+        quote: "“We will make the future, or we will die for it.”",
         thought: "You promised you'd deliver it. I have a feelin' you just tossed it away the moment ya left the Outpost."
     },
     {
