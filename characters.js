@@ -56,7 +56,7 @@ window.characters = [
         file: "Alphonse.png",
         name: "Alphonse Oswell",
         quote: "",
-        thought: ""
+        thought: "“I still fear the open water, where tide sways mystery. Is it so wrong to walk the paths already built for me?”"
     },
     {
         file: "AmaSaba.png",
@@ -852,7 +852,7 @@ window.characters = [
     {
         file: "Ophalis.png",
         name: "Olivia Kromwell",
-        quote: ""
+        quote: "“Something isn't beautiful because it lasts.”"
     },
     {
         file: "Oriana.png",
@@ -872,7 +872,7 @@ window.characters = [
     {
         file: "Lysander.png",
         name: "Oros Lysander",
-        quote: ""
+        quote: "“There's a world out there for everyone.”"
     },
     {
         file: "Pathos.png",
@@ -1088,7 +1088,7 @@ window.characters = [
     {
         file: "Thor.png",
         name: "Thor",
-        quote: "",
+        quote: "“A quiet life for me.”",
         thought: "Another Nova! Stars do die on Almadine, don't they.."
     },
     {
