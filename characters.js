@@ -438,7 +438,7 @@ window.characters = [
     {
         file: "Greg.png",
         name: "Grzegorz \"Greg\" Brzęczyszczykiewicz",
-        quote: "“FUCK YOU, I LEARNT NOTHING!”"
+        quote: "“Guess I'm stayin' a bit longer.”"
     },
     {
         file: "Gunter.png",
