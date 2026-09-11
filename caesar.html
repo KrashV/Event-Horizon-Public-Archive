@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Caesar's Diary</title>
+<style>
+:root{
+  --paper:#efe4c8;
+  --ink:#2e2923;
+  --desk:#2b1d17;
+  --tape:#dbc69b;
+  --bubble:#09080d;
+  --bubble-line:#f8f3ff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  min-height:100vh;
+  padding:28px 12px;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 20% 15%,#6c4935 0 2%,transparent 18%),
+    radial-gradient(circle at 85% 80%,#1b110d 0 8%,transparent 40%),
+    linear-gradient(135deg,#3a251d,var(--desk));
+  font-family:Georgia,"Times New Roman",serif;
+}
+
+.page-switch{
+  position:fixed;
+  right:clamp(16px,3vw,30px);
+  bottom:clamp(16px,3vw,30px);
+  z-index:100;
+  display:grid;
+  place-items:center;
+  width:68px;
+  aspect-ratio:1;
+  border:1px solid #d9c083;
+  border-radius:50%;
+  color:inherit;
+  background:radial-gradient(circle at 32% 25%,#503423,#1b110d 68%);
+  box-shadow:0 10px 25px #0008,0 0 18px #d9c08355;
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+
+.page-switch:hover{
+  transform:translateY(-3px) rotate(8deg);
+  box-shadow:0 14px 28px #0009,0 0 28px #d9c08388;
+}
+
+.page-switch:focus-visible{
+  outline:2px solid #fff7db;
+  outline-offset:4px;
+}
+
+.page-switch svg{width:51px;height:51px;filter:drop-shadow(0 2px 2px #0008)}
+.black-hole-core{fill:#030308;stroke:#a68bff;stroke-width:1.2}
+.black-hole-ring{fill:none;stroke-linecap:round}
+.black-hole-ring.outer{stroke:#f8d88a;stroke-width:3}
+.black-hole-ring.mid{stroke:#9e7cff;stroke-width:2.4}
+.black-hole-ring.inner{stroke:#74dcff;stroke-width:1.8}
+
+.book{width:min(1380px,100%);margin:auto}
+
+.cover-intro,
+.closing{
+  position:relative;
+  background:
+    repeating-linear-gradient(to bottom,transparent 0 31px,#a4967830 32px,transparent 33px),
+    linear-gradient(90deg,#eadcbb,var(--paper) 10%,var(--paper) 90%,#ddccaa);
+  border:1px solid #9e8763;
+  box-shadow:0 20px 55px #0007;
+}
+
+.cover-intro{
+  margin-bottom:24px;
+  padding:55px 8% 44px;
+  text-align:center;
+}
+
+.journal-icon{
+  position:absolute;
+  z-index:3;
+  top:clamp(14px,2.4vw,32px);
+  right:clamp(16px,4.2vw,62px);
+  width:clamp(82px,10vw,148px);
+  margin:0;
+  padding:6px;
+  background:#f7f0df;
+  border:1px solid #d4c4a7;
+  box-shadow:0 7px 15px #3e302744;
+  transform:rotate(7deg);
+}
+
+.journal-icon::before{
+  content:"";
+  position:absolute;
+  z-index:1;
+  top:-10px;
+  left:50%;
+  width:68%;
+  height:18px;
+  background:rgba(219,198,155,.8);
+  box-shadow:0 1px 2px #0002;
+  transform:translateX(-50%) rotate(-5deg);
+}
+
+.journal-icon img{
+  display:block;
+  width:100%;
+  aspect-ratio:1;
+  object-fit:cover;
+  image-rendering:pixelated;
+}
+
+.kicker{
+  font:12px "Courier New",monospace;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:#786b59;
+}
+
+h1{
+  margin:.3rem 0;
+  font-size:clamp(3rem,8vw,6.5rem);
+  line-height:.95;
+  font-weight:500;
+  transform:rotate(-1deg);
+}
+
+.subtitle{
+  max-width:760px;
+  margin:16px auto 0;
+  line-height:1.8;
+  color:#5e5448;
+}
+
+.spread{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  margin-bottom:24px;
+  /* Thoughts from photos at the top of a page may rise above this spread. */
+  overflow:visible;
+  border:1px solid #927d5e;
+  background:
+    linear-gradient(90deg,transparent 49.72%,#796b5638 50%,transparent 50.28%),
+    repeating-linear-gradient(to bottom,transparent 0 31px,#a496782e 32px,transparent 33px),
+    linear-gradient(90deg,#eadcbb,var(--paper) 8%,var(--paper) 92%,#ddccaa);
+  box-shadow:0 22px 60px #0007,inset 22px 0 30px #6c56351c,inset -22px 0 30px #6c56351c;
+}
+
+.page{
+  position:relative;
+  min-width:0;
+  min-height:980px;
+  padding:62px 42px 70px;
+}
+.page.left{border-right:1px solid #75664d28}
+
+.collage{
+  display:flex;
+  flex-wrap:wrap;
+  align-content:flex-start;
+  align-items:flex-start;
+  justify-content:space-between;
+  column-gap:4%;
+  row-gap:44px;
+}
+
+.entry{
+  position:relative;
+  width:var(--w);
+  margin-top:var(--mt);
+  margin-left:var(--ml);
+  margin-right:var(--mr);
+  transform:rotate(var(--tilt));
+  transform-origin:center;
+  z-index:2;
+  transition:transform .18s ease;
+}
+.entry:hover,.entry:focus-within{
+  z-index:50;
+  transform:rotate(var(--tilt)) translateY(-3px);
+}
+
+.photo{
+  position:relative;
+  width:100%;
+  padding:10px 10px 36px;
+  background:#f7f0df;
+  border:1px solid #d4c4a7;
+  box-shadow:0 8px 18px #3e302740;
+  outline:none;
+}
+.photo::before,.photo::after{
+  content:"";
+  position:absolute;
+  z-index:4;
+  width:66px;
+  height:20px;
+  top:-8px;
+  background:rgba(219,198,155,.78);
+  box-shadow:0 1px 2px #0002;
+}
+.photo::before{left:-14px;transform:rotate(-11deg)}
+.photo::after{right:-14px;transform:rotate(9deg)}
+
+.portrait{
+  display:block;
+  width:100%;
+  aspect-ratio:var(--ratio);
+  object-fit:cover;
+  object-position:center;
+  image-rendering:pixelated;
+  background:#d9ceb6;
+}
+
+.caption{
+  position:relative;
+  z-index:8;
+  margin-top:10px;
+  text-align:center;
+  padding:0 8px;
+}
+
+.name{
+  margin:0;
+  color:#342a22;
+  font-size:clamp(1rem,1.5vw,1.35rem);
+  text-shadow:0 1px 0 rgba(255,248,230,.55);
+  white-space:pre-line;
+}
+
+blockquote{
+  margin:6px 0 0;
+  color:#4d443a;
+  font-size:.94rem;
+  line-height:1.48;
+  font-style:italic;
+  overflow-wrap:anywhere;
+  text-shadow:0 1px 0 rgba(255,248,230,.45);
+  white-space:pre-line;
+}
+
+.template-quote{
+  color:#8a8175;
+  opacity:.82;
+  text-shadow:none;
+}
+
+/* Thought bubble: one continuous cloud outline, so no seams show through. */
+.thought-bubble{
+  position:absolute;
+  z-index:32;
+  width:clamp(250px,30vw,390px);
+  max-width:calc(100vw - 32px);
+  /* The cloud sits to the right of the photo, while its smallest dot meets
+     the photo's upper-right corner.  Bottom anchoring holds that connection
+     in place even when a longer thought grows. */
+  left:calc(100% - 3px);
+  right:auto;
+  bottom:calc(100% + 23px);
+  min-height:170px;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateY(8px) scale(.93);
+  transform-origin:25% 100%;
+  transition:opacity .18s ease, transform .18s ease, visibility .18s;
+  filter:drop-shadow(0 10px 18px rgba(41,28,20,.18));
+}
+
+/* Long messages get a wider cloud and a deeper safe margin, so their final
+   lines never run into the cloud's narrow lower lobes. */
+.thought-bubble.is-long-thought{
+  width:clamp(330px,38vw,470px);
+}
+
+.photo.has-thought:hover .thought-bubble,
+.photo.has-thought:focus .thought-bubble,
+.photo.thought-open .thought-bubble{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0) scale(1);
+}
+
+.bubble-cloud{
+  position:relative;
+  z-index:2;
+  width:100%;
+  min-height:150px;
+}
+
+.cloud-shape{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  overflow:visible;
+}
+
+.cloud-shape path{
+  fill:var(--bubble);
+  stroke:var(--bubble-line);
+  stroke-width:2;
+  stroke-linejoin:round;
+  vector-effect:non-scaling-stroke;
+  filter:drop-shadow(0 1px 0 rgba(255,255,255,.18));
+}
+
+.bubble-text{
+  position:relative;
+  z-index:3;
+  min-height:150px;
+  /* Keep type within the cloud's solid centre, away from its curved edge. */
+  padding:50px 68px 38px;
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  justify-content:center;
+}
+
+.is-long-thought .bubble-text{
+  /* A taller SVG cloud stretches its top and bottom lobes.  These larger
+     insets keep the first and final lines clear of those curved edges. */
+  padding:64px 84px 56px;
+}
+
+.thought-text{
+  display:block;
+  width:100%;
+  color:#fffdfd;
+  font-family:"Segoe Print","Bradley Hand","Comic Sans MS",cursive;
+  font-size:1.03rem;
+  line-height:1.44;
+  font-style:italic;
+  letter-spacing:.012em;
+  text-shadow:0 1px 7px rgba(208,191,255,.42);
+  white-space:pre-line;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+  hyphens:auto;
+}
+
+.tail{
+  position:absolute;
+  z-index:1;
+  background:var(--bubble);
+  border:2px solid var(--bubble-line);
+  border-radius:50%;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.18);
+}
+.tail.t1{left:34px; bottom:10px; width:20px; height:20px}
+.tail.t2{left:15px; bottom:-10px; width:13px; height:13px}
+.tail.t3{left:-1px; bottom:-27px; width:8px; height:8px}
+
+/* Keep bubbles on the inside of the right-hand page. */
+.page.right .thought-bubble{
+  left:auto;
+  right:calc(100% + 3px);
+  transform-origin:75% 100%;
+}
+.page.right .tail.t1{left:auto; right:34px}
+.page.right .tail.t2{left:auto; right:15px}
+.page.right .tail.t3{left:auto; right:-1px}
+
+.page-number{
+  position:absolute;
+  bottom:18px;
+  color:#8b7c68;
+  font:11px "Courier New",monospace;
+}
+.page.left .page-number{left:26px}
+.page.right .page-number{right:26px}
+
+.doodle{
+  position:absolute;
+  color:#8e5146;
+  opacity:.58;
+  font-family:"Comic Sans MS","Bradley Hand",cursive;
+  pointer-events:none;
+  user-select:none;
+}
+.doodle.star{font-size:2rem}
+.doodle.note{font-size:.9rem}
+
+.missing{
+  display:grid;
+  place-items:center;
+  min-height:180px;
+  padding:22px;
+  background:#ddd1b8;
+  color:#766b5c;
+  text-align:center;
+  font:12px/1.5 "Courier New",monospace;
+}
+
+.closing{
+  padding:42px 8%;
+  text-align:center;
+  color:#5d5146;
+  line-height:1.8;
+}
+
+.farewell-image{
+  position:relative;
+  width:min(900px,100%);
+  margin:0 auto 34px;
+  padding:8px;
+  background:#15110f;
+  border:1px solid #6f5d48;
+  box-shadow:0 12px 26px #2b1d1760;
+}
+
+.farewell-image::before,
+.farewell-image::after{
+  content:"";
+  position:absolute;
+  z-index:2;
+  top:-11px;
+  width:clamp(48px,8vw,72px);
+  height:20px;
+  background:rgba(219,198,155,.8);
+  box-shadow:0 1px 2px #0002;
+}
+
+.farewell-image::before{
+  left:-16px;
+  transform:rotate(-10deg);
+}
+
+.farewell-image::after{
+  right:-16px;
+  transform:rotate(10deg);
+}
+
+.farewell-image img{
+  position:relative;
+  z-index:1;
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  image-rendering:pixelated;
+}
+
+/* Safe collage layouts */
+.entry[data-slot="0"]{--w:39%;--mt:0px;--ml:3%;--mr:2%;--tilt:-3deg;--ratio:1/1}
+.entry[data-slot="1"]{--w:34%;--mt:70px;--ml:5%;--mr:4%;--tilt:2deg;--ratio:4/5}
+.entry[data-slot="2"]{--w:43%;--mt:8px;--ml:0%;--mr:2%;--tilt:-4deg;--ratio:5/4}
+.entry[data-slot="3"]{--w:31%;--mt:82px;--ml:8%;--mr:4%;--tilt:3deg;--ratio:1/1}
+
+.page.variant-1 .entry[data-slot="0"]{--w:33%;--mt:42px;--ml:12%;--mr:5%;--tilt:3deg;--ratio:4/5}
+.page.variant-1 .entry[data-slot="1"]{--w:40%;--mt:0px;--ml:1%;--mr:4%;--tilt:-2deg;--ratio:1/1}
+.page.variant-1 .entry[data-slot="2"]{--w:34%;--mt:74px;--ml:3%;--mr:6%;--tilt:4deg;--ratio:1/1}
+.page.variant-1 .entry[data-slot="3"]{--w:41%;--mt:5px;--ml:2%;--mr:4%;--tilt:-3deg;--ratio:5/4}
+
+.page.variant-2 .entry[data-slot="0"]{--w:43%;--mt:5px;--ml:2%;--mr:4%;--tilt:-2deg;--ratio:5/4}
+.page.variant-2 .entry[data-slot="1"]{--w:31%;--mt:75px;--ml:4%;--mr:8%;--tilt:4deg;--ratio:1/1}
+.page.variant-2 .entry[data-slot="2"]{--w:32%;--mt:80px;--ml:8%;--mr:3%;--tilt:2deg;--ratio:4/5}
+.page.variant-2 .entry[data-slot="3"]{--w:40%;--mt:2px;--ml:2%;--mr:5%;--tilt:-4deg;--ratio:4/5}
+
+@media(max-width:850px){
+  body{padding:8px 5px}
+  .spread{display:block}
+  .page{
+    min-height:auto;
+    padding:42px 24px 62px;
+  }
+  .page.left{border-right:0;border-bottom:1px solid #75664d28}
+  .collage{display:block}
+  .entry,
+  .page.variant-1 .entry,
+  .page.variant-2 .entry{
+    width:min(72vw,360px)!important;
+    margin:30px auto 52px!important;
+  }
+  .entry:nth-child(even){transform:rotate(2deg)}
+  .entry:nth-child(odd){transform:rotate(-2deg)}
+
+  .thought-bubble,
+  .page.right .thought-bubble{
+    left:auto;
+    right:3px;
+    width:min(86vw,390px);
+    transform-origin:75% 100%;
+  }
+  .thought-bubble.is-long-thought{
+    width:min(86vw,390px);
+  }
+  .tail.t1{left:auto; right:34px}
+  .tail.t2{left:auto; right:15px}
+  .tail.t3{left:auto; right:-1px}
+  .photo.has-thought:hover .thought-bubble,
+  .photo.has-thought:focus .thought-bubble,
+  .photo.thought-open .thought-bubble{
+    transform:translateY(0) scale(1);
+  }
+}
+</style>
+</head>
+<body>
+<main class="book">
+  <section class="cover-intro">
+    <figure class="journal-icon">
+      <img src="images/CAESAR_ICON.png" alt="Caesar's journal icon">
+    </figure>
+    <div class="kicker">EVENT HORIZON · CHARACTER ARCHIVE</div>
+    <h1>Caesar's Diary</h1>
+    <p class="subtitle">
+      If you found this journal, it means my memories are mine no more.
+      I hope, at least, they will become yours.
+    </p>
+  </section>
+
+  <div id="spreads"></div>
+
+  <section class="closing">
+    <figure class="farewell-image">
+      <img src="images/CAESAR_END.png" alt="Caesar before his death">
+    </figure>
+    <strong>This journey has come to an end.</strong><br>
+    Thank you to everyone who was a part of it, and to the friends I made along the way.
+    See you on the next one!
+  </section>
+</main>
+
+<a class="page-switch" href="index.html" aria-label="Return to the Event Horizon archive" title="Return to the Event Horizon archive">
+  <svg viewBox="0 0 64 64" aria-hidden="true">
+    <ellipse class="black-hole-ring outer" cx="32" cy="32" rx="27" ry="11" transform="rotate(-18 32 32)"/>
+    <ellipse class="black-hole-ring mid" cx="32" cy="32" rx="23" ry="8" transform="rotate(25 32 32)"/>
+    <ellipse class="black-hole-ring inner" cx="32" cy="32" rx="18" ry="6" transform="rotate(-18 32 32)"/>
+    <circle class="black-hole-core" cx="32" cy="32" r="14"/>
+  </svg>
+</a>
+
+<script src="characters.js"></script>
+<script>
+const root=document.getElementById("spreads");
+const DEFAULT_QUOTE="Someone that I used to know";
+
+function getQuote(person){
+  const suppliedQuote=typeof person.quote==="string" ? person.quote.trim() : "";
+  const isTemplate=!suppliedQuote || suppliedQuote===DEFAULT_QUOTE;
+  return {text:isTemplate ? DEFAULT_QUOTE : suppliedQuote,isTemplate};
+}
+
+if(!Array.isArray(window.characters)){
+  root.innerHTML='<section class="spread"><div class="page"><div class="missing">Could not load characters.js</div></div></section>';
+  throw new Error("characters.js is missing or invalid.");
+}
+
+function buildThoughtBubble(textValue){
+  const bubble=document.createElement("div");
+  bubble.className="thought-bubble";
+  if(textValue.trim().length>140) bubble.classList.add("is-long-thought");
+
+  const cloud=document.createElement("div");
+  cloud.className="bubble-cloud";
+
+  const svg=document.createElementNS("http://www.w3.org/2000/svg","svg");
+  svg.classList.add("cloud-shape");
+  svg.setAttribute("viewBox","0 0 360 160");
+  svg.setAttribute("preserveAspectRatio","none");
+  svg.setAttribute("aria-hidden","true");
+
+  const outline=document.createElementNS("http://www.w3.org/2000/svg","path");
+  outline.setAttribute("d",
+    "M55 133 C31 134 16 120 16 100 C16 78 31 64 55 63 " +
+    "C49 41 66 20 93 22 C105 5 139 1 160 19 " +
+    "C181 2 217 4 237 22 C263 7 296 21 300 44 " +
+    "C327 43 346 60 344 84 C359 99 354 122 333 134 " +
+    "C325 153 291 157 270 143 C249 164 208 162 186 145 " +
+    "C165 163 128 162 109 143 C89 155 62 151 55 133 Z"
+  );
+  svg.appendChild(outline);
+  cloud.appendChild(svg);
+
+  const textWrap=document.createElement("div");
+  textWrap.className="bubble-text";
+
+  const text=document.createElement("span");
+  text.className="thought-text";
+  // Preserve intentional line breaks, but avoid a run of blank lines creating
+  // a disproportionately tall bubble.
+  text.textContent=textValue
+    .trim()
+    .replace(/\r\n?/g,"\n")
+    .replace(/\n[ \t]*\n(?:[ \t]*\n)+/g,"\n\n");
+
+  textWrap.append(text);
+  cloud.appendChild(textWrap);
+
+  const t1=document.createElement("span");
+  t1.className="tail t1";
+  const t2=document.createElement("span");
+  t2.className="tail t2";
+  const t3=document.createElement("span");
+  t3.className="tail t3";
+
+  bubble.append(cloud,t1,t2,t3);
+  return bubble;
+}
+
+function makeEntry(person,slot){
+  const article=document.createElement("article");
+  article.className="entry";
+  article.dataset.slot=slot;
+
+  const photo=document.createElement("div");
+  photo.className="photo";
+
+  const img=document.createElement("img");
+  img.className="portrait";
+  img.src=`images/${person.file}`;
+  img.alt=`${person.name} portrait`;
+  img.onerror=()=>{
+    if(!img.dataset.usedFallback){
+      img.dataset.usedFallback="true";
+      img.src="images/UNKNOWN.jpg";
+      img.alt="Unknown portrait";
+      return;
+    }
+    img.replaceWith(Object.assign(document.createElement("div"),{
+      className:"missing",
+      innerHTML:`Missing image`
+    }));
+  };
+  photo.appendChild(img);
+
+  const thought=(person.thought || "").trim();
+  if(thought){
+    photo.classList.add("has-thought");
+    photo.tabIndex=0;
+    photo.setAttribute("role","button");
+    photo.setAttribute("aria-label",`Show thought about ${person.name}`);
+
+    const bubble=buildThoughtBubble(thought);
+    photo.appendChild(bubble);
+
+    photo.addEventListener("click",(e)=>{
+      e.stopPropagation();
+      document.querySelectorAll(".photo.thought-open").forEach(p=>{
+        if(p!==photo)p.classList.remove("thought-open");
+      });
+      photo.classList.toggle("thought-open");
+    });
+
+    photo.addEventListener("keydown",(e)=>{
+      if(e.key==="Enter" || e.key===" "){
+        e.preventDefault();
+        photo.click();
+      }else if(e.key==="Escape"){
+        photo.classList.remove("thought-open");
+      }
+    });
+  }
+
+  const caption=document.createElement("div");
+  caption.className="caption";
+
+  const name=document.createElement("h2");
+  name.className="name";
+  name.textContent=person.name;
+
+  const quote=document.createElement("blockquote");
+  const quoteData=getQuote(person);
+  quote.textContent=quoteData.text;
+  quote.classList.toggle("template-quote",quoteData.isTemplate);
+
+  caption.append(name,quote);
+  article.append(photo,caption);
+  return article;
+}
+
+function addDoodles(page,index){
+  const sets=[
+    [["star","★","86%","13%","7deg"],["note","DO NOT FORGET","7%","91%","-7deg"]],
+    [["star","✦","7%","35%","-12deg"],["note","you're a mess, Caesar","68%","91%","5deg"]],
+    [["star","☆","84%","78%","8deg"],["note","stay happy :)","6%","12%","-5deg"]]
+  ];
+  for(const [kind,text,left,top,rot] of sets[index%sets.length]){
+    const d=document.createElement("div");
+    d.className=`doodle ${kind}`;
+    d.textContent=text;
+    d.style.left=left;
+    d.style.top=top;
+    d.style.transform=`rotate(${rot})`;
+    page.appendChild(d);
+  }
+}
+
+for(let i=0,spreadIndex=0;i<window.characters.length;i+=8,spreadIndex++){
+  const spread=document.createElement("section");
+  spread.className="spread";
+
+  const left=document.createElement("div");
+  left.className=`page left variant-${(spreadIndex*2)%3}`;
+  const right=document.createElement("div");
+  right.className=`page right variant-${(spreadIndex*2+1)%3}`;
+
+  const leftCollage=document.createElement("div");
+  leftCollage.className="collage";
+  const rightCollage=document.createElement("div");
+  rightCollage.className="collage";
+
+  const batch=window.characters.slice(i,i+8);
+  batch.slice(0,4).forEach((person,j)=>leftCollage.appendChild(makeEntry(person,j)));
+  batch.slice(4,8).forEach((person,j)=>rightCollage.appendChild(makeEntry(person,j)));
+
+  left.appendChild(leftCollage);
+  right.appendChild(rightCollage);
+
+  addDoodles(left,spreadIndex*2);
+  addDoodles(right,spreadIndex*2+1);
+
+  const ln=document.createElement("div");
+  ln.className="page-number";
+  ln.textContent=spreadIndex*2+1;
+  const rn=document.createElement("div");
+  rn.className="page-number";
+  rn.textContent=spreadIndex*2+2;
+  left.appendChild(ln);
+  right.appendChild(rn);
+
+  spread.append(left,right);
+  root.appendChild(spread);
+}
+
+document.addEventListener("click",()=>{
+  document.querySelectorAll(".photo.thought-open").forEach(p=>p.classList.remove("thought-open"));
+});
+</script>
+</body>
+</html>

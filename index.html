@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Event Horizon Archive</title>
+  <style>
+    :root{
+      --bg:#05060b;
+      --paper:#10131dcc;
+      --paper2:#171a27d9;
+      --ink:#f4f0e7;
+      --muted:#b9b6c8;
+      --gold:#e8c66c;
+      --gold2:#8e6b27;
+      --violet:#8067ff;
+      --cyan:#6de8ff;
+      --card-w: 240px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      min-height:100vh;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 50% -10%, #242049 0 0%, transparent 34%),
+        radial-gradient(circle at 18% 35%, #17152e 0, transparent 29%),
+        radial-gradient(circle at 82% 62%, #151328 0, transparent 30%),
+        var(--bg);
+      font-family: Georgia, "Times New Roman", serif;
+      overflow-x:hidden;
+    }
+
+    /* Stars: no image needed */
+    body::before,
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:-4;
+      background-repeat:repeat;
+    }
+
+    body::before{
+      opacity:.65;
+      background-image:
+        radial-gradient(circle, #fff 0 1px, transparent 1.4px),
+        radial-gradient(circle, #a8dfff 0 1px, transparent 1.3px),
+        radial-gradient(circle, #fff3bc 0 .8px, transparent 1.2px);
+      background-size: 91px 91px, 137px 137px, 173px 173px;
+      background-position: 8px 12px, 41px 73px, 101px 28px;
+    }
+
+    body::after{
+      opacity:.2;
+      background-image:
+        radial-gradient(circle, #fff 0 .8px, transparent 1px);
+      background-size:47px 47px;
+      background-position:13px 21px;
+    }
+
+    .black-hole{
+      position:fixed;
+      z-index:-3;
+      width:min(70vw, 920px);
+      aspect-ratio:1;
+      left:50%;
+      top:39%;
+      transform:translate(-50%,-50%) rotate(-12deg);
+      border-radius:50%;
+      pointer-events:none;
+      background:
+        radial-gradient(circle at center,
+          #000 0 24%,
+          #030207 25% 31%,
+          transparent 32% 40%),
+        conic-gradient(from 15deg,
+          transparent 0 7%,
+          #ffe29a 9% 10%,
+          #b866ff 12% 15%,
+          transparent 18% 28%,
+          #70e6ff 31% 33%,
+          #f5b454 36% 39%,
+          transparent 42% 62%,
+          #8e61ff 66% 69%,
+          #ffe09a 72% 74%,
+          transparent 78% 100%);
+      filter:blur(.2px) drop-shadow(0 0 60px #5d4aff55);
+      opacity:.58;
+    }
+
+    .black-hole::before{
+      content:"";
+      position:absolute;
+      inset:20%;
+      border-radius:50%;
+      background:#000;
+      box-shadow:
+        0 0 35px 10px #000,
+        0 0 80px 18px #5a3a9c55;
+    }
+
+    .black-hole::after{
+      content:"";
+      position:absolute;
+      inset:12%;
+      border-radius:50%;
+      border:2px solid #ffd67d88;
+      transform:scaleY(.28) rotate(-7deg);
+      box-shadow:
+        0 0 10px #fff1aeaa,
+        0 0 30px #8e5dff99,
+        0 0 60px #4a95ff55;
+    }
+
+    .veil{
+      position:fixed;
+      inset:0;
+      z-index:-2;
+      pointer-events:none;
+      background:
+        linear-gradient(to bottom, #05060b11 0%, #05060b44 45%, #05060bee 100%);
+    }
+
+    .page-switch{
+      position:fixed;
+      right:clamp(16px, 3vw, 30px);
+      bottom:clamp(16px, 3vw, 30px);
+      z-index:100;
+      display:grid;
+      place-items:center;
+      width:68px;
+      aspect-ratio:1;
+      border:1px solid #ffe4a080;
+      border-radius:50%;
+      color:inherit;
+      background:radial-gradient(circle at 32% 25%, #4b3d76, #171325 68%);
+      box-shadow:0 10px 25px #0008, 0 0 22px #8067ff55;
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+
+    .page-switch:hover{
+      transform:translateY(-3px) rotate(-3deg);
+      box-shadow:0 14px 28px #0009, 0 0 30px #ffe4a066;
+    }
+
+    .page-switch:focus-visible{
+      outline:2px solid #fff4c8;
+      outline-offset:4px;
+    }
+
+    .page-switch svg{width:48px;height:48px;filter:drop-shadow(0 2px 2px #0008)}
+    .page-switch .book-cover{fill:#a87932;stroke:#ffe8a6;stroke-width:1.5}
+    .page-switch .book-page{fill:#fff0c7;stroke:#69451d;stroke-width:1.2}
+    .page-switch .book-lines{stroke:#9a7040;stroke-width:1.5;stroke-linecap:round}
+
+    header{
+      max-width:1100px;
+      margin:0 auto;
+      padding:92px 24px 56px;
+      text-align:center;
+    }
+
+    .eyebrow{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      text-transform:uppercase;
+      letter-spacing:.24em;
+      color:#cabfff;
+      font-size:.78rem;
+    }
+
+    h1{
+      margin:.6rem 0 .8rem;
+      font-size:clamp(3rem, 8vw, 7.5rem);
+      line-height:.88;
+      font-weight:500;
+      text-shadow:0 0 38px #5c43a966;
+    }
+
+    .subtitle{
+      max-width:720px;
+      margin:0 auto;
+      color:var(--muted);
+      font-size:clamp(1rem, 2vw, 1.25rem);
+      line-height:1.7;
+    }
+
+    .rule{
+      width:160px;
+      height:1px;
+      margin:28px auto 0;
+      background:linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    main{
+      width:min(1380px, calc(100% - 36px));
+      margin:0 auto;
+      padding:0 0 70px;
+    }
+
+    .yearbook-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(min(100%, var(--card-w)), 1fr));
+      gap:28px;
+      align-items:start;
+    }
+
+    .card{
+      position:relative;
+      padding:12px 12px 18px;
+      border:1px solid #dec27370;
+      border-radius:3px;
+      background:
+        linear-gradient(145deg, #ffffff08, transparent 38%),
+        linear-gradient(180deg, var(--paper), var(--paper2));
+      box-shadow:
+        0 16px 50px #0008,
+        inset 0 0 0 1px #ffffff08;
+      backdrop-filter:blur(8px);
+      transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      border-color:#f0d47fba;
+      box-shadow:0 22px 70px #000b, 0 0 24px #7a5cff22;
+    }
+
+    .portrait-wrap{
+      position:relative;
+      overflow:hidden;
+      aspect-ratio:1 / 1;
+      background:#090a0f;
+      border:1px solid #66572f;
+      box-shadow:inset 0 0 0 5px #0b0c12;
+    }
+
+    .portrait{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+      image-rendering:pixelated;
+    }
+
+    .portrait-wrap::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      box-shadow:inset 0 0 26px #0008;
+    }
+
+    .name{
+      margin:15px 0 4px;
+      font-size:1.28rem;
+      font-weight:700;
+      color:#fff4cf;
+      text-align:center;
+      letter-spacing:.025em;
+      white-space:pre-line;
+    }
+
+    blockquote{
+      margin:8px 6px 0;
+      color:#ccc8da;
+      text-align:center;
+      line-height:1.5;
+      font-size:.96rem;
+      font-style:italic;
+      white-space:pre-line;
+    }
+
+    .template-quote{
+      color:#777487;
+      opacity:.78;
+      text-shadow:0 1px 8px #0008;
+    }
+
+    .missing{
+      display:grid;
+      place-items:center;
+      width:100%;
+      height:100%;
+      padding:20px;
+      text-align:center;
+      color:#8e8b9e;
+      font:12px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace;
+      background:
+        radial-gradient(circle at 50% 40%, #2d2746, #0b0c12 65%);
+    }
+
+    .ending{
+      text-align:center;
+      max-width:780px;
+      margin:78px auto 10px;
+      padding:42px 26px;
+      border-top:1px solid #7e693b55;
+      border-bottom:1px solid #7e693b55;
+      color:#d8d3e5;
+      line-height:1.8;
+    }
+
+    .ending strong{
+      color:#fff2c9;
+      font-size:1.2rem;
+      font-weight:500;
+    }
+
+    footer{
+      padding:18px 20px 48px;
+      text-align:center;
+      color:#777487;
+      font:12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    @media (max-width:600px){
+      header{padding-top:64px}
+      main{width:min(100% - 24px, 1380px)}
+      .yearbook-grid{gap:18px}
+    }
+
+    @media (prefers-reduced-motion:no-preference){
+      body::before{animation:drift 55s linear infinite}
+      body::after{animation:drift2 80s linear infinite}
+      .black-hole{animation:pulse 8s ease-in-out infinite}
+    }
+
+    @keyframes drift{
+      to{background-position:99px 103px, -96px 210px, 274px 201px}
+    }
+    @keyframes drift2{
+      to{background-position:-81px 115px}
+    }
+    @keyframes pulse{
+      50%{filter:blur(.2px) drop-shadow(0 0 85px #7158cc77); opacity:.66}
+    }
+  </style>
+</head>
+<body>
+  <div class="black-hole" aria-hidden="true"></div>
+  <div class="veil" aria-hidden="true"></div>
+
+  <header>
+    <div class="eyebrow">Character Archive</div>
+    <h1>Event Horizon</h1>
+    <p class="subtitle">
+      Sentimentality is the purpose of everything
+    </p>
+    <div class="rule"></div>
+  </header>
+
+  <main>
+    <section id="yearbook" class="yearbook-grid" aria-label="Character yearbook"></section>
+
+    <section class="ending">
+      <strong>The server may go dark, but none of this disappears.</strong><br>
+      We were here. We made stories together. And somewhere beyond the last logout,
+      these faces are still drifting among the stars.
+    </section>
+  </main>
+
+  <footer>END OF TRANSMISSION · MADE BY ALL OF YOU</footer>
+
+  <a class="page-switch" href="caesar.html" aria-label="Open Caesar's diary" title="Open Caesar's diary">
+    <svg viewBox="0 0 64 64" aria-hidden="true">
+      <path class="book-cover" d="M7 13c9-4 17-2 25 5 8-7 16-9 25-5v38c-9-4-17-2-25 5-8-7-16-9-25-5Z"/>
+      <path class="book-page" d="M11 17c8-2 14 0 20 5v29c-6-5-12-7-20-5Z"/>
+      <path class="book-page" d="M33 22c6-5 12-7 20-5v29c-8-2-14 0-20 5Z"/>
+      <path class="book-lines" d="M16 27h10M16 32h10M16 37h8M38 27h10M38 32h10M38 37h8"/>
+    </svg>
+  </a>
+
+  <script src="characters.js"></script>
+  <script>
+    // Character data is loaded from characters.js.
+    // Keep characters.js in the same folder as this HTML file.
+
+    const grid = document.getElementById("yearbook");
+    const DEFAULT_QUOTE = "Memories, lost in space and time";
+
+    function getQuote(person) {
+      const suppliedQuote = typeof person.quote === "string" ? person.quote.trim() : "";
+      const isTemplate = !suppliedQuote || suppliedQuote === DEFAULT_QUOTE;
+      return { text: isTemplate ? DEFAULT_QUOTE : suppliedQuote, isTemplate };
+    }
+
+    if (!Array.isArray(window.characters)) {
+      grid.innerHTML = `
+        <article class="card">
+          <div class="missing">
+            Could not load characters.js.<br><br>
+            Make sure it is in the same folder as this HTML file.
+          </div>
+        </article>`;
+      throw new Error("characters.js is missing or invalid.");
+    }
+
+    for (const person of window.characters) {
+      const article = document.createElement("article");
+      article.className = "card";
+
+      const frame = document.createElement("div");
+      frame.className = "portrait-wrap";
+
+      const img = document.createElement("img");
+      img.className = "portrait";
+      img.src = `images/${person.file}`;
+      img.alt = `${person.name} portrait`;
+      img.onerror = () => {
+        frame.innerHTML = `<div class="missing">
+          File not found
+        </div>`;
+      };
+
+      const name = document.createElement("h2");
+      name.className = "name";
+      name.textContent = person.name;
+
+      const quote = document.createElement("blockquote");
+      const quoteData = getQuote(person);
+      quote.textContent = quoteData.text;
+      quote.classList.toggle("template-quote", quoteData.isTemplate);
+
+      frame.appendChild(img);
+      article.append(frame, name, quote);
+      grid.appendChild(article);
+    }
+  </script>
+</body>
+</html>
