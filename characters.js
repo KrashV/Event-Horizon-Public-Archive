@@ -98,7 +98,7 @@ window.characters = [
     {
         file: "Arthok.png",
         name: "Arthok The Mighty",
-        quote: "",
+        quote: "“Hark thee to that tumultuous mistress Fate, to adventure anew!”",
         thought: "A small bug with a giant spirit. Think you'd be into H&H with us!"
     },
     {
@@ -288,7 +288,7 @@ window.characters = [
     {
         file: "Crone.png",
         name: "Crone",
-        quote: "",
+        quote: "“Freedom... But I can't stop... it will never be enough.”",
         thought: "BAD BUG!"
     },
     {
@@ -861,7 +861,7 @@ window.characters = [
     {
         file: "Oriar.png",
         name: "Oriar 34",
-        quote: ""
+        quote: "“These variables have changed me... They've added to my equation... I set my own vector now!”"
     },
     {
         file: "Orio.png",
