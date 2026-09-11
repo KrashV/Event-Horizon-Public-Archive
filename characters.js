@@ -1136,7 +1136,7 @@ window.characters = [
     {
         file: "WormQueen.jpg",
         name: "Worm Queen",
-        quote: ""
+        quote: "“This place has been nothing but misery, only a rare few polite souls alongside brother Venor and my loyal knight Duster.”"
     },
     {
         file: "Xavier.png",
