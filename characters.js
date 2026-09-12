@@ -107,6 +107,11 @@ window.characters = [
         thought: "A small bug with a giant spirit. Think you'd be into H&H with us!"
     },
     {
+        file: "AR1A-N3.png",
+        name: "AR1A-N3",
+        quote: "“To witness the stars above us, is a noble goal.”"
+    },
+    {
         file: "Ascalaphos.png",
         name: "Ascalaphos",
         quote: "“I have lost a trillion souls. I will love trillions more.”"
