@@ -230,6 +230,12 @@ window.characters = [
         thought: "I know ya saw me as some dimwit silly nova. To an extent, you were right. I hope.. I hope one day ya also can afford to be a little dimwitted."
     },
     {
+        file: "Catnip.png",
+        name: "\"Catnip\" A/K",
+        quote: "“The Sanguine Ecliptic world, the Scarlet Basin, the Auric Layer. Two centuries here and this place has embedded itself in my soul.”",
+        thought: "We never talked. But ya were important to Galax. I remember him being happy when ya agreed to give him a lesson. Thank you."
+    },
+    {
         file: "cami.png",
         name: "'Cami'",
         quote: "“It has been a delight to meet you all! I will miss you…”",
@@ -255,7 +261,7 @@ window.characters = [
     {
         file: "Circe.png",
         name: "Circe",
-        quote: "",
+        quote: "“Burn them. Brightly, as fuel for your vision of a star ignited!”",
         thought: "I never got that terarrium. Not gonna be petty, but... Ya know. Could've at least say 'Hey, sorry, I forgot'."
     },
     {
@@ -443,7 +449,7 @@ window.characters = [
     {
         file: "Greg.png",
         name: "Grzegorz \"Greg\" Brzęczyszczykiewicz",
-        quote: "“Guess I'm stayin' a bit longer.”"
+        quote: "Fine, I learnt SOMETHING, okay?”"
     },
     {
         file: "Gunter.png",
@@ -619,12 +625,6 @@ window.characters = [
         name: "Kerp",
         quote: "",
         thought: "GOOD BUG!"
-    },
-    {
-        file: "Catnip.png",
-        name: "Kindran \"Catnip\"",
-        quote: "",
-        thought: "We never talked. But ya were important to Galax. I remember him being happy when ya agreed to give him a lesson. Thank you."
     },
     {
         file: "Kitt.png",
@@ -1040,7 +1040,7 @@ window.characters = [
     {
         file: "Shin.png",
         name: "Shin O'rourke",
-        quote: ""
+        quote: "“Where has my brother gone?”"
     },
     {
         file: "Skarti.png",
@@ -1128,6 +1128,11 @@ window.characters = [
         thought: "The best bug in the Universe! Or, well, what's left of it. Wish I could examine you, hoo-hoo~"
     },
     {
+        file: "Vilhelm.png",
+        name: "Vilhelm",
+        quote: ""
+    },
+    {
         file: "Vivis.png",
         name: "Vivis Huthieth",
         quote: "“You will lose me to crowded rooms, but never thunder, and lightning.”"
@@ -1199,7 +1204,7 @@ window.characters = [
     {
         file: "Vvulf.png",
         name: "Zharviks, The Wolf",
-        quote: ""
+        quote: "Still defending the wall, never got the memo that people were leaving."
     },
     {
         file: "Zhuk.png",
