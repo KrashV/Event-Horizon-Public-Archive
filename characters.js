@@ -342,7 +342,7 @@ window.characters = [
         thought: "Heard you were a big deal. I love dragons, don' know why everyone hated you so much."
     },
     {
-        file: "DUSTER.png",
+        file: "Duster.png",
         name: "Duster",
         quote: "“My soul is burning bright, pal. Hoo Ha!”",
         thought: "Almost as cool a mask as mine was. Thank ya for letting me be someone happy, even if fer a day."
@@ -830,7 +830,7 @@ window.characters = [
         quote: "“See y'all around, Pardners.”"
     },
     {
-        file: "NIMDA.png",
+        file: "Nimda.png",
         name: "NIMDA",
         quote: "“Let me put this in terms YOU understand. Do you understand how many HANDJOBS that is?!”"
     },
