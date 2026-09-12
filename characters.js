@@ -943,6 +943,12 @@ window.characters = [
         thought: "Another one from our Gang. Where did you end up? And did Kort give ya that cig? He probably smoked it himself... little adorable fucker..."
     },
     {
+        file: "RedF.png",
+        name: "Red",
+        quote: "",
+        thought: "I still remember ya. One of the founding members of t'Elevator Gang, I saw ya only once after we got from that ship. I don' remember the words we said, but I remember that comfort they brough."
+    },
+    {
         file: "Reginald.png",
         name: "Reginald \"HOUSE.EXE\" Von Keva IV",
         quote: "“You know what they say, haha!”"
