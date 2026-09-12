@@ -184,7 +184,7 @@ window.characters = [
     },
     {
         file: "bob.png",
-        name: "Bob",
+        name: "Bob Grenouille",
         quote: "“RIBBIT”",
         thought: "One of the original Elevator Gang members! I'm glad they gave ya a way to express yerself. And.. thank you, fer t'help with that terminal, back on the ship. I know, it looked silly, stpuid, even - but it was important. For me."
     },
