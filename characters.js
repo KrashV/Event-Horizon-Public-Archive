@@ -289,7 +289,7 @@ window.characters = [
     {
         file: "CRASH.png",
         name: "\"CRASH\"",
-        quote: "“THIS PLACE SUCKED BUT SOME OF THE THINKING FLESH DID NOT.”"
+        quote: "“THIS PLACE SUCKED BUT SOME OF THE 'GANICS DID NOT.\nFUCK THE CRUSADERS. WHY IS ONE ON THIS PAGE.”"
     },
     {
         file: "CraigK.png",
