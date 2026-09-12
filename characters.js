@@ -511,10 +511,9 @@ window.characters = [
         quote: "“For a better tomorrow.”"
     },
     {
-        file: "iosefka.png",
-        name: "Iosefka Montome",
-        quote: "“A wild ride, this was~ The only worth of this hellscape though, were the family and friends I made along the way.”",
-        thought: "I don't remember what for, but I look at you with gratitude. Have ya saved me, once? Or give me a painkiller? Did I donate plasma? Whatever it was, thank you."
+        file: "Ina.png",
+        name: "Ina Kurusagi",
+        quote: "“I'd like to see everyone smile.”"
     },
     {
         file: "Inari.png",
@@ -527,20 +526,21 @@ window.characters = [
         quote: "“Nobody said it'd be easy.”"
     },
     {
+        file: "iosefka.png",
+        name: "Iosefka Montome",
+        quote: "“A wild ride, this was~ The only worth of this hellscape though, were the family and friends I made along the way.”",
+        thought: "I don't remember what for, but I look at you with gratitude. Have ya saved me, once? Or give me a painkiller? Did I donate plasma? Whatever it was, thank you."
+    },
+    {
         file: "Irva.png",
         name: "Irvandir Lomenk",
         quote: "“Here I learned things I never would otherwise. This is no ah-dehn.”",
         thought: "I feel like we could be friends. But I just don' know how to even approach it. Makin' friends is hard when y're almost ninety."
     },
     {
-        file: "Ina.png",
-        name: "Ina Kurusagi",
-        quote: "“I'd like to see everyone smile.”"
-    },
-    {
         file: "Ishumeht.png",
         name: "Ishumeht",
-        quote: "“There is a war, deep in our hearts, and that is where all battles ought to be fought.”",
+        quote: "“How I have come to love this final realm of our tapestry, to watch it woven through all of you. But now it is complete, and time to hang my mantle up. Be well, my little ones.”",
         thought: "Don't laugh, but... It was the most beautiful bug I've ever seen. I will name it an Almadinian Beetle."
     },
     {
