@@ -346,7 +346,7 @@
     @media (prefers-reduced-motion:no-preference){
       body::before{animation:drift 55s linear infinite}
       body::after{animation:drift2 80s linear infinite}
-      .black-hole{animation:pulse 8s ease-in-out infinite}
+      .black-hole{animation:rotate-ring 180s linear infinite, pulse 8s ease-in-out infinite}
     }
 
     @keyframes drift{
@@ -357,6 +357,10 @@
     }
     @keyframes pulse{
       50%{filter:blur(.2px) drop-shadow(0 0 85px #7158cc77); opacity:.66}
+    }
+    @keyframes rotate-ring{
+      from{transform:translate(-50%,-50%) rotate(-12deg)}
+      to{transform:translate(-50%,-50%) rotate(348deg)}
     }
   </style>
   <link rel="icon" type="image/png" href="images/icons/blackhole.png">
