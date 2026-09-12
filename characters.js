@@ -540,7 +540,7 @@ window.characters = [
     {
         file: "Ishumeht.png",
         name: "Ishumeht",
-        quote: "“How I have come to love this final realm of our tapestry, to watch it woven through all of you. But now it is complete, and time to hang my mantle up. Be well, my little ones.”",
+        quote: "“How I have come to love our tapestry woven together. But now it is complete, and time to hang up my mantle. Be well, my little ones.”",
         thought: "Don't laugh, but... It was the most beautiful bug I've ever seen. I will name it an Almadinian Beetle."
     },
     {
