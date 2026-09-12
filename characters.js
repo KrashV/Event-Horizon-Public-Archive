@@ -104,7 +104,7 @@ window.characters = [
         file: "Arthok.png",
         name: "Arthok The Mighty",
         quote: "“Hark thee to that tumultuous mistress Fate, to adventure anew!”",
-        thought: "A small bug with a giant spirit. Think you'd be into H&H with us!"
+        thought: "A small bug with a giant spirit. Somethin' tells me you'd fit Twin Moons right in!"
     },
     {
         file: "AR1A-N3.png",
@@ -124,7 +124,7 @@ window.characters = [
     {
         file: "Apollo.png",
         name: "Apollo",
-        quote: "",
+        quote: "“I came to this World lookin' to conquer new frontiers and settle new fields, and that's what i'm still intendin' to do.”",
         thought: "Saw ya only once. I wonder, do all stars die 'ere?"
     },
     {
@@ -204,7 +204,7 @@ window.characters = [
         file: "Bud.png",
         name: "Bud",
         quote: "“A gunslinger deals only in death, but a pastor deals in everlasting life. I can only thank God I never returned to the former.”",
-        thought: "I... really missed ya. Needed some o'that Bud Light fer my soul. I know I ain't your league, but... Ah, heck, yea, I had quite a crush!"
+        thought: "I... really missed ya. Needed some o'that Bud Light fer my soul. I know I ain't your league, but...\nAh, heck, yea, I had quite a crush!"
     },
     {
         file: "Barncat.png",
@@ -220,37 +220,37 @@ window.characters = [
         file: "Caesar.png",
         name: "Caesar",
         quote: "“I don' remember t'time we had. But I feel it bein' great. Thank you.”",
-        thought: "Who were ya, Caesar, before? Where are your parents. Did ya have a wife? Kids of your own? Did you like piano or some jazz? Were ya nice, or were ya a college bully? Who. Were. You?!.."
+        thought: "Who were ya, Caesar, before? Did ya have a wife? Kids of your own? Did you rock in a band, played a piano? Were ya a nerd, or were ya a college bully?\nI will never know. No matter how hard I looked at the reflection in a mirror, I always saw a stranger. I hope...  I hope he was a good man.\nA man who loved bugs."
     },
     {
         file: "Carnelian.png",
         name: "Carnelian",
         quote: "“The one force I couldn't protect you all from.. it's a shame really. I hope we all meet again.”",
-        thought: "The Red part. The one I disguist the most."
+        thought: "The Red part. I'd assume, y're the one I have to hate t'most."
     },
     {
         file: "Calendula.png",
         name: "Lady Navigator L'Orr Calendula Begi Gol'Denhue",
         quote: "",
-        thought: "I know ya saw me as some dimwit silly nova. To an extent, you were right. I hope.. I hope one day ya also can afford to be a little dimwitted."
+        thought: "I know ya saw me as some dimwit silly nova. To an extent, you were right.\nI hope one day ya also can afford to be a little dimwitted, too."
     },
     {
         file: "Catnip.png",
         name: "\"Catnip\" A/K",
         quote: "“The Sanguine Ecliptic world, the Scarlet Basin, the Auric Layer. Two centuries here and this place has embedded itself in my soul.”",
-        thought: "We never talked. But ya were important to Galax. I remember him being happy when ya agreed to give him a lesson. Thank you."
+        thought: "We never talked properly. But ya were important to Galax. He was so shy, I had to ask ya m'self to give him a lesson in magic - and ya did! Thank you, that was electric."
     },
     {
         file: "cami.png",
         name: "'Cami'",
         quote: "“It has been a delight to meet you all! I will miss you…”",
-        thought: "You made me happy, truly happy, with that gift. Last time I was feeling anythin' but dread an' doom. I wonder what happened with Mozz...  hopefully he's with a more reliable parent."
+        thought: "We both had no memories when we came here, but we made new ones. The ones that matter!\nYou made me happy, truly happy, with that gift. Last time I was feeling anythin' but dread an' impending doom.\nI wonder what happened to Mozz... Hope someone took'im along the ride."
     },
     {
         file: "ChrisNew.png",
         name: "Chris Calman",
         quote: "“Love y'all!”",
-        thought: "I still feel the warmth of yer lips on my shell, even as it's gettin' thinner by the day. It keeps me just a little bit more sane. Do you... do you even remember it?   Bah, in any case. Cami is amazing, I'm happy fer ya both!"
+        thought: "My first kiss! My shell turned pink that day, and then it lost all colours.\nOur paths went aside, but I'm still happy to call you a friend of mine."
     },
     {
         file: "Chitlihuitzi.png",
@@ -261,7 +261,7 @@ window.characters = [
         file: "Chitlipotonqui.png",
         name: "Chitlipotonqui Fenuku",
         quote: "“Bright stars do not mean a bright future - and vice versa or whatever the humans say.”",
-        thought: "Hey man. You can have as many bird orgies as ya like, but no means no, okay?!"
+        thought: "Hey man. You can have as many bird orgies as ya like, but no means no, okay?!\nStill feel bad for what happen'd to you. May Kluex let ya rest."
     },
     {
         file: "Circe.png",
@@ -278,13 +278,13 @@ window.characters = [
         file: "Cole.png",
         name: "Cole",
         quote: "",
-        thought: "Can't even begin to describe how grateful I were when we met. That talk we had was probably nothing in yer life, but it put me back on my feet when I was spiraling down. Thank ya. Thank ya, Cole."
+        thought: "Can't even begin to describe how grateful I were when we met. That talk we had was probably nothing in yer life - just a blimp - but it put me back on my feet when I was spiraling down. Thank ya. Thank ya, Cole."
     },
     {
         file: "Cooper.png",
         name: "Cooper",
         quote: "",
-        thought: "It all started with yer loss. I'm sorry I changed t'colours on yer cube that one time. Sorry I put that fish under yer pillow in college. Sorry I ratted ya out to Mom when ya asked me not to. No one even seem t'remember ya anymore. I just... I just hope, somehow, ya slipped away. Ya always do.     I love you."
+        thought: "Where did'cha go, Cooper?.. I'm sorry I changed t'colours on yer cube that one time. Sorry I put that fish under yer pillow in college. Sorry I ratted ya out to Mom when ya asked me not to.\nNobody even seem t'remember ya anymore. But I do. I always did\n I just... I just hope, somehow, ya slipped away. Ya always do.\nTell mom I did great. Let her think I wasn't a failure."
     },
     {
         file: "CRASH.png",
@@ -328,7 +328,7 @@ window.characters = [
         file: "Red.png",
         name: "Declan \"Red\" Callahan",
         quote: "“Everyone knows the price of everything else. Very few know the value.”",
-        thought: "T'was just a borin' wait for The Scourge fer ya, but I really enjoyed our time t'gether. Maybe one day we could play ball, ay?"
+        thought: "T'was just a borin' wait for The Scourge fer ya, but I really enjoyed our time t'gether.\nI'm sure you've got beautiful eyes."
     },
     {
         file: "Demothi.png",
@@ -431,13 +431,13 @@ window.characters = [
         file: "President.png",
         name: "Madame Galactic President",
         quote: "",
-        thought: "They can say whatever they want. I knew I got it. I hugged t'President of the Galaxy. They can suck it."
+        thought: "They can say whatever they want.\nI knew I got it.\nI hugged t'President of the Galaxy!\nThey all can suck it!"
     },
     {
         file: "Galax.png",
         name: "Galax Tess",
         quote: "“I'll see you in the next one...”",
-        thought: "You were a friend, once. Maybe ya could help, while there still was time. But ya seemed so happy, I just... didn't want to bother. We all had our melting points. Seems like mine just got me faster. Take care of Kayada for me."
+        thought: "You were a friend, once, and it hurt me every day to see ya. Every time we spoke, it felt like you were tryin' to reach someone that was no longer there. I wish we had time to learn each other one more time.\nTake care of Kayada for me."
     },
     {
         file: "Goldmail.png",
@@ -449,7 +449,7 @@ window.characters = [
         file: "Greene.png",
         name: "Greene",
         quote: "“I've wanted to explore for so long, to see the world! And now I can. But I won't forget.”",
-        thought: "The Green part. Nothing to say, y'all can go fuck yourself."
+        thought: "The Green part. I wonder if ya ever felt sorry for what ya've done, or ya just felt like you need to say it."
     },
     {
         file: "Greg.png",
@@ -488,7 +488,7 @@ window.characters = [
         file: "helgo.png",
         name: "Helgo",
         quote: "“Pearls before swine.”",
-        thought: "You and Olashia are the closest thin' I could call a family. I'm sorry I couldn't be a better friend. I would give a lot to take back the words I said, the bench pushes I did, and the doubts in yer silly communism movement I've expressed. Y're a great man. I hope ya find an even better one."
+        thought: "You and Olashia are the closest thin' I could call a family.\nI'm sorry I couldn't be a better friend. I would give a lot to take back the words I said, the bench pushes I did, and the doubts in yer silly communism movement I've expressed.\nY're a great man. I hope ya find yourself an even better one."
     },
     {
         file: "Heretic.png",
@@ -503,8 +503,7 @@ window.characters = [
     {
         file: "HollyValentine.png",
         name: "Holly Valentine",
-        quote: "“Plaudite, amici, comedia finita est.”",
-        thought: "Colourful."
+        quote: "“Plaudite, amici, comedia finita est.”"
     },
     {
         file: "Weber.png",
@@ -515,7 +514,7 @@ window.characters = [
         file: "iosefka.png",
         name: "Iosefka Montome",
         quote: "“A wild ride, this was~ The only worth of this hellscape though, were the family and friends I made along the way.”",
-        thought: "T'was short but meaningful. Thank ya, doc."
+        thought: "I don't remember what for, but I look at you with gratitude. Have ya saved me, once? Or give me a painkiller? Did I donate plasma? Whatever it was, thank you."
     },
     {
         file: "Inari.png",
@@ -542,7 +541,7 @@ window.characters = [
         file: "Ishumeht.png",
         name: "Ishumeht",
         quote: "“There is a war, deep in our hearts, and that is where all battles ought to be fought.”",
-        thought: "Don't laugh, but... It was the most beautiful bug I've ever seen. Would ya let me call it after me?"
+        thought: "Don't laugh, but... It was the most beautiful bug I've ever seen. I will name it an Almadinian Beetle."
     },
     {
         file: "Itzel.png",
@@ -570,7 +569,7 @@ window.characters = [
         file: "JohnLeonard.png",
         name: "John Leonard",
         quote: "Remembered by all, listened to by none.",
-        thought: "I know I were merely pesterin' yer oh so important discussions with Miranda when I tried t'save my friend... I hope ya got better, still."
+        thought: "I know I were merely pesterin' yer oh so important discussions with Miranda when I tried t'save my friend...\nI hope ya got better, still."
     },
     {
         file: "Joshua.png",
@@ -601,7 +600,7 @@ window.characters = [
         file: "Kassen.png",
         name: "Kassen Lias",
         quote: "",
-        thought: "I was dragging that FUCKING terminal through THE WHOLE GOD DAMN ship. I made it EVERYONE's problem. And what you did, when I FINALLY gave it to ya? I hate you. I hope you die in a fire.     No, scratch that. I hope you live a long, loong life. Fuck you, 'Friend'. Fuck. You."
+        thought: "I was dragging that FUCKING terminal through THE WHOLE GOD DAMN ship. I made it EVERYONE's problem. And what you did, when I FINALLY gave it to ya?\nI hate you. I hope you die in a fire.\nNo, scratch that. I hope you live a long, loong life.\nFuck you, 'Friend'. Fuck. You."
     },
     {
         file: "Kameyo.png",
@@ -643,8 +642,8 @@ window.characters = [
     },
     {
         file: "Dealer.png",
-        name: "Klein Kava'adar, The Dealer\nThe House\nThe Executant\nThe Black Jack\nThe Weaver of Fate\nThe Son of Fortune\nThe Serpent of Spades",
-        quote: "“Each and every Choice of yours was truly inspiring. Nnow, it's time to make my own.”"
+        name: "Klein Kava'adar, The Serpent of Spades",
+        quote: "“Each and every Choice of yours was truly inspiring. Now, it's time to make my own.”"
     },
     {
         file: "Kluexilin.png",
@@ -675,7 +674,7 @@ window.characters = [
         file: "Lantern.png",
         name: "Lantern",
         quote: "“I'm glad I got to make you all smile.”",
-        thought: "Ya killed us both that day.  I.. I wish I knew what was written in that letter, now. Maybe you were sayin' sorry. I will never know."
+        thought: "Ya killed us both that day.\nI.. I wish I knew what was written in that letter, now. Maybe you were sayin' sorry. I will never know."
     },
     {
         file: "Laurine.png",
@@ -696,8 +695,8 @@ window.characters = [
     {
         file: "Linette.png",
         name: "Linette Mavis",
-        quote: "",
-        thought: "We opened a geek club together, do ya still remember? It was small, an' we never actually gathered to play. But t'was good to be a part of somethin'."
+        quote: "“I'm a Doctah, and thas' what Doctahs do.”",
+        thought: "We opened a geek club together, do ya still remember? 'Tween Moons'! It was small, an' we never actually gathered to play. But t'was good to be a part of somethin'."
     },
     {
         file: "Lonet.png",
@@ -777,7 +776,7 @@ window.characters = [
         file: "Miranda.png",
         name: "Miranda LeBlanc",
         quote: "“Come to know those around you closely, and protect each other.”",
-        thought: "I remember feelin' bad fer ya. Ya had issues, troubles that brin' ya down. Ya thanked me fer listenin' and wished we could talk more...   Ya needed therapy. I needed a surgery."
+        thought: "I remember feelin' bad fer ya. Ya had issues, troubles that brin' ya down. Ya thanked me fer listenin' and wished we could talk more...\nYa needed a therapist. I needed two."
     },
     {
         file: "Misique.png",
@@ -802,7 +801,7 @@ window.characters = [
     {
         file: "Mezzekainulhi.png",
         name: "Mezzekainulhi",
-        quote: ""
+        quote: "“From the Aether we are spawned, to the Aether we return. My eternal gratitude to those who spared me from the Abyss. You know who you are.”"
     },
     {
         file: "Najja.png",
@@ -850,13 +849,13 @@ window.characters = [
         file: "OlashiaPriest.png",
         name: "Olashia Isaberd",
         quote: "“If you die and nobody hated you, did you really stand for anything?”",
-        thought: "I heard your songs. They were like a beacon for my sanity to not drown on itself. Now... let me, at least, illuminate yer desk. I promise I don't break any further."
+        thought: "My little sassy sister... I heard your songs. They were like a beacon for my sanity to not drown on itself.\nNow... let me, at least, illuminate yer desk. I promise I won't break any further.\n\n..if I do, try UV glue."
     },
     {
         file: "Olivia.png",
         name: "Olivia Packer-Rodriguez",
         quote: "“This place has been nothing but inspiration for me. To the next chapter! I can't wait to make music off this place.”",
-        thought: "We were on t'same wavelength."
+        thought: "We were on t'same wavelength. Same silly, stupid puns that you either love o'hate. O-live on, lass."
     },
     {
         file: "Ollie.png",
@@ -891,7 +890,8 @@ window.characters = [
     {
         file: "Pathos.png",
         name: "Pathos",
-        quote: "“Sentimentality is the purpose of everything.”"
+        quote: "“Sentimentality is the purpose of everything.”",
+        thought: "Mixed feelings, pal. I ain't glorifying a kidnapper, but...\nYou did let people like Galax an' Kayada meet. For that, I'm thankful."
     },
     {
         file: "Peter.png",
@@ -907,13 +907,13 @@ window.characters = [
         file: "Pierre.png",
         name: "Pierre Biganchi",
         quote: "“The Painter has the universe in his mind and hands”",
-        thought: "I wonder, if ya could still teach me how t'do the bricks"
+        thought: "I wonder, if ya could still teach me how t'make the bricks."
     },
     {
         file: "Pins.png",
         name: "Pins",
         quote: "“Above all else, be kind.”",
-        thought: "Hope ya find better friends. Than me - I'm dead."
+        thought: "Hope ya found better friends than me. Cause I'm dead, heh.\nYou were a good one. I'll put a pin on it."
     },
     {
         file: "Phonecia.png",
@@ -924,7 +924,7 @@ window.characters = [
         file: "Perpetua.png",
         name: "Perpetua",
         quote: "“I've failed so many.. and even now.. maybe it is better for me to become just a memory..”",
-        thought: "The Purple one. I have nothin' t'say."
+        thought: "The Purple one. I have nothin' good t'say.\nSo I won't."
     },
     {
         file: "R-193.png",
@@ -940,7 +940,7 @@ window.characters = [
         file: "Ratley.png",
         name: "Ratley",
         quote: "",
-        thought: "Another one from our Gang. Where did you end up? And did Kort give ya the cig? He probably smoked it himself... little adorable fucker..."
+        thought: "Another one from our Gang. Where did you end up? And did Kort give ya that cig? He probably smoked it himself... little adorable fucker..."
     },
     {
         file: "Reginald.png",
@@ -961,7 +961,7 @@ window.characters = [
         file: "quadruplearms.png",
         name: "Quadruple Arms",
         quote: "“This cannot be the end.”",
-        thought: "Had to take it back, friend."
+        thought: "Had to take it back, friend. Hard to come across t'glass that ain't melting from our plasma."
     },
     {
         file: "RachelMoon.png",
@@ -972,7 +972,7 @@ window.characters = [
         file: "Ramielle.png",
         name: "Ramielle",
         quote: "“The universe is indifferent. I won't be.”",
-        thought: "How hard I tried t'win ya over. But no matter what I tried, I just weren't good enough. Y're a wonderful woman, but I wish ya could cut me just a little slack. Maybe you could see me more than just a silly nova runnin' aroun' town."
+        thought: "How hard I tried t'win ya over, to let ya see me more than just a silly nova runnin' aroun' town with useless tasks.  Y're a wonderful woman, Rami. A strong one too, despite yer age!\nI wish...  I wish I could help more. And to see your smile, with no visor hiding it from us."
     },
     {
         file: "Raya.png",
@@ -998,7 +998,7 @@ window.characters = [
         file: "Rose2.png",
         name: "Rose Leonhart",
         quote: "“Find new stars, let the sparks come alive. There's always a second chance.”",
-        thought: "Didn't have t'lash out at ya. I just didn't wanna bother anyone."
+        thought: "Didn't have t'lash out at ya. I just didn't wanna bother anyone with somethin' no one can fix. I was crumblin' on a spot, and ya caught some strays."
     },
     {
         file: "Yaoguai.png",
@@ -1050,12 +1050,13 @@ window.characters = [
     {
         file: "Skarti.png",
         name: "Skarti",
-        quote: ""
+        quote: "“Portals? Alternate dimensions? Magic? Ugh, go bother someone else, I have work to do.”"
     },
     {
         file: "Stephen.png",
         name: "Stephen",
-        quote: "“We'll get out of here, I promise.”"
+        quote: "“We'll get out of here, I promise.”",
+        thought: "For a New Light initiative... I would haved loved some guiding light."
     },
     {
         file: "Tai.png",
@@ -1109,7 +1110,7 @@ window.characters = [
         file: "Thomas.png",
         name: "Thomas",
         quote: "",
-        thought: "Thought you were a lost one. Turns out, you were a coo-coo one. Thanks fer not shootin' me on the spot."
+        thought: "Thought you were a lost one. Turns out, you were a coo-coo one.\nThanks fer not shootin' me on the spot when I brought ya fruits."
     },
     {
         file: "Ushiro.png",
@@ -1130,7 +1131,7 @@ window.characters = [
         file: "Venor.png",
         name: "Venor",
         quote: "“You've all been a treat!”",
-        thought: "The best bug in the Universe! Or, well, what's left of it. Wish I could examine you, hoo-hoo~"
+        thought: "The best bug in the Universe! Or, well, what's left of it. Wish I could examine you, hoo-hoo~\nSeriously - thank ya. I couldn't taste the honey, but seein' other people lovin' it made it just as sweet."
     },
     {
         file: "Vilhelm.png",
@@ -1204,7 +1205,7 @@ window.characters = [
     {
         file: "Zerreniiataxu.png",
         name: "Zerreniiataxu Trihil-Ayasanyi",
-        quote: "“No, I'm not going to do the 'tail thing'.”"
+        quote: "“I'm still debating what to say in the debrief. Something tells me 'trapped in a alternate dimension with a plethora of fantastical weirdos' isn't going to cut it.”"
     },
     {
         file: "Vvulf.png",
