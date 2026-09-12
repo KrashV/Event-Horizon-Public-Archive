@@ -347,6 +347,7 @@
       body::before{animation:drift 55s linear infinite}
       body::after{animation:drift2 80s linear infinite}
       .black-hole{animation:rotate-ring 180s linear infinite, pulse 8s ease-in-out infinite}
+      .black-hole::after{animation:counter-rotate-ring 180s linear infinite}
     }
 
     @keyframes drift{
@@ -361,6 +362,10 @@
     @keyframes rotate-ring{
       from{transform:translate(-50%,-50%) rotate(-12deg)}
       to{transform:translate(-50%,-50%) rotate(348deg)}
+    }
+    @keyframes counter-rotate-ring{
+      from{transform:rotate(0deg) scaleY(.28) rotate(-7deg)}
+      to{transform:rotate(-360deg) scaleY(.28) rotate(-7deg)}
     }
   </style>
   <link rel="icon" type="image/png" href="images/icons/blackhole.png">
