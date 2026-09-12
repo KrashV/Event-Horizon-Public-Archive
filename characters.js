@@ -721,7 +721,7 @@ window.characters = [
     {
         file: "Magnolia.png",
         name: "Magnolia Bronze",
-        quote: "“Kinda crazy, being the last star in the universe... But, I made it work. Ah, yea, before I forget, I love my wife, and Surtr can kiss my ass!”"
+        quote: "“I'll burn brighter than ever before... But, gods, I've gotta RELAX. Maybe just for a littl- Yea, yea, Aurora, I'm comin'!.. Sorry, gotta go, bye!”"
     },
     {
         file: "Madna.png",
