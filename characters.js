@@ -21,6 +21,11 @@ window.characters = [
         thought: "T'Blue part. From all o'them... Guess you'd be a'ight."
     },
     {
+        file: "AETHER.png",
+        name: "A.E.T.H.E.R.",
+        quote: "“I never quite realized... how beautiful life could be.”"
+    },
+    {
         file: "Aetherion.png",
         name: "Aetherion",
         quote: "“Gettin' too old for this.”"
@@ -741,6 +746,11 @@ window.characters = [
         file: "Mark.png",
         name: "Mark",
         quote: "“Blair has great boobs.”"
+    },
+    {
+        file: "MARS.png",
+        name: "MARS-02",
+        quote: "“I love stones. Once, a human founded civilization by striking one stone against another.”"
     },
     {
         file: "Melissa2.png",
