@@ -459,7 +459,7 @@ window.characters = [
     {
         file: "Gunter.png",
         name: "Günther",
-        quote: "“Battles are won not by armies, but by heroes that a few and far between.”",
+        quote: "“Battles are won not by armies, but by heroes that are few and far between.”",
         thought: "Saw yer tank outside. Sheesh, man, these Crusaders wouldn't stand a chance!"
     },
     {
