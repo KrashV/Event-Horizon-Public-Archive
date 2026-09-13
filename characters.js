@@ -419,7 +419,7 @@ window.characters = [
     {
         file: "Fradharc.png",
         name: "Fradharc",
-        quote: "“Freed his men, and learnt to let go of hate.”"
+        quote: "Freed his men, and learnt to let go of hate."
     },
     {
         file: "Gabriel.png",
