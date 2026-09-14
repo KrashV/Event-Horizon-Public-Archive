@@ -671,6 +671,11 @@ window.characters = [
         quote: "“...so much... I did wrong... no chance... to prove myself...”"
     },
     {
+        file: "Kyroa.png",
+        name: "Kyroa",
+        quote: ""
+    },
+    {
         file: "Lantern.png",
         name: "Lantern",
         quote: "“I'm glad I got to make you all smile.”",
