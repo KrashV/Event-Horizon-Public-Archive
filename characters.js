@@ -541,7 +541,7 @@ window.characters = [
         file: "Ishumeht.png",
         name: "Ishumeht",
         quote: "“How I have come to love our tapestry woven together. But now it is complete, and time to hang up my mantle. Be well, my little ones.”",
-        thought: "Don't laugh, but... It was the most beautiful bug I've ever seen. I will name it an Almadinian Beetle."
+        thought: "Don't laugh, but... It was the most beautiful bug I've ever seen. I will name it an Almandinian Beetle."
     },
     {
         file: "Itzel.png",
@@ -1110,7 +1110,7 @@ window.characters = [
         file: "Thor.png",
         name: "Thor",
         quote: "“A quiet life for me.”",
-        thought: "Another Nova! Stars do die on Almadine, don't they.."
+        thought: "Another Nova! Stars do die on Almandine, don't they.."
     },
     {
         file: "Thomas.png",
